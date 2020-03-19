@@ -1,0 +1,29 @@
+<form #loginFormulaire ="ngForm">
+  <label for="email">Email</label>
+  <input email required
+    id="email"
+    type="text"
+    name="eamil"
+    #emailt = "ngModel"
+    ngModel
+    class="form-control" >
+    <div class="alert alert-danger" *ngIf ="emailt.invalid && emailt.dirty">
+      Votre email n'est pas valid
+    </div>
+
+  <label for="pwd">Mot de pass</label>
+  <input required
+  #pwdInput ="ngModel"
+   minlength="4"
+   id="pwd"
+   type="password"
+   name="password"
+   ngModel
+   class="form-control" >
+   <div class="alert alert-danger" *ngIf ="pwdInput.invalid && pwdInput.touched">
+     Le password doit etre avoir au minimum 4 carracteres
+   </div>
+   <button [disabled]="loginFormulaire.invalid" class="btn btn-primary" (click)="login(loginFormulaire.value)">
+     Se connecter
+   </button>
+</form>

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "meubDb": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "angulaformat",
+    "password": "",
+    "name": "meubDb",
+    "user": "root",
+    "connector": "mysql"
+  }
+}

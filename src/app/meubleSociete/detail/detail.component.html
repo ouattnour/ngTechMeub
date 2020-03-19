@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center" *ngIf="meub">
+  <div class="col-lg-8 push-lg-4">
+    <div class="tab-content p-b-3">
+      <div class="tab-pane active" id="profile">
+        <h4 class="m-y-2"> {{meub?.fabriquant}}</h4>
+        <div class="d-flex justify-content-center">
+          <a href="assets/images/{{meub.path}}"> <img class="rounded-circle align-center" src="assets/images/{{meub.path | defaulImage}}"
+            width="150px"
+            height="150px"
+            alt="{{meub.responsable }}"></a>>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="m-t-2"><span class="fa fa-clok-0 ion-clock pull-left">Informations</span></h4>
+            <table class="table table-hover table-striped">
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Fabriquant </strong> {{meub?.fabriquant}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Responsable </strong> {{meub?.responsable}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Nomble Disponible </strong> {{meub?.disponible}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Telephone </strong> {{meub?.telephone}}
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Telephone </strong> {{meub?.lieu}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="f-flex justify-content-center">
+              <button class="btn btn-danger" (click)="deleteMeuble()">
+                Suprimer
+              </button>
+              <button class="btn btn-primary" (click)="update(meub.id)">
+                Modifier
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--/row-->
+      </div>
+    </div>
+  </div>
+</div>

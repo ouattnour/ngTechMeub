@@ -1,0 +1,22 @@
+ <ol class="list-group">
+   <li class="list-group-item" *ngFor="let tea of teams; let ind = index">
+    {{tea}} - {{ind}}
+   </li>
+ </ol>
+
+
+
+<p [ngClass]="{
+  'est' : false,
+  'barca' : false,
+  'milan' : true
+}">
+  classe works!</p>
+  <div appHighlight>
+    Bonjour je teste une directive
+  </div>
+  <input *ngIf="show"
+   type="text" class="from-control" appRainbow>
+   <button class="btn btn-primary" (click)="show=!show">
+     femer moi
+   </button>

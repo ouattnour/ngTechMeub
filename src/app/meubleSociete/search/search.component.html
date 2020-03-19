@@ -1,0 +1,18 @@
+<input
+  type="text"
+  [(ngModel)] ="chaine"
+   class="form-control"
+   (keyup) ="search()"
+>
+<ol>
+
+  <li
+  *ngFor ="let meub of searchReult"
+  class="list-group-item" (click)="selectMeubl(meub)">
+      <a href="assets/images/{{meub.path}}"> <img src="assets/images/{{meub.path | defaulImage}}"
+       width="25px"
+       height="25px"
+       alt="{{meub.responsable }}"></a> Societé: {{meub.fabriquant | titlecase}}
+  </li>
+
+</ol>

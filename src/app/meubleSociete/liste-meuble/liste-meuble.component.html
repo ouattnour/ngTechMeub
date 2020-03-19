@@ -1,0 +1,7 @@
+<ol class="list-group">
+  <app-item-meuble
+  *ngFor="let meubs of meubs"
+  (selectMeuble)="selctMeuble($event)"
+   [meub]="meubs">
+  </app-item-meuble>
+</ol>

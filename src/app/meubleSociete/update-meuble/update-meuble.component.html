@@ -1,0 +1,29 @@
+
+<form #formulaire ="ngForm" *ngIf ="meub" >
+  <label for="fabriquant">Fabriquant</label>
+  <input id="fabriquant" type="text" [(ngModel)] ="meub.fabriquant" name="fabriquant" class="form-control">
+
+  <label for="responsable">Responsable</label>
+  <input id="responsable" type="text" [(ngModel)] ="meub.responsable" name="responsable" class="form-control">
+
+  <label for="disponible">Nombre disponible</label>
+  <input required min ="1" id="disponible" type="number" [(ngModel)] ="meub.disponible" name="disponible" class="form-control">
+
+  <label for="prix">Prix</label>
+  <input required id="prix" type="text" [(ngModel)] ="meub.prix" name="prix" class="form-control">
+
+  <label for="description">Description</label>
+  <input id="description" type="text" [(ngModel)] ="meub.description" name="description" class="form-control">
+
+  <label for="telephone">Telephone</label>
+  <input required id="telephone" type="text" [(ngModel)] ="meub.telephone" name="telephone" class="form-control">
+
+  <label for="lieu">Situé a</label>
+  <input required id="lieu" type="text" [(ngModel)] ="meub.lieu" name="lieu" class="form-control">
+
+  <label for="path">Path</label>
+  <input  id="Path" type="text" [(ngModel)] ="meub.path" name="Path" class="form-control">
+
+  <button [disabled]="formulaire.invalid" (click)="updateMeuble()" class="btn btn-primary">Envoyer</button>
+</form>
+

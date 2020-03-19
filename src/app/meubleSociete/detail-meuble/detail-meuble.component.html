@@ -1,0 +1,65 @@
+<div class="col-md-12 col-sm-12">
+  <div class="card-container">
+     <div class="card">
+         <div class="front">
+             <div class="cover">
+                 <img src="assets/images/{{meub.path}}">
+             </div>
+             <div class="user">
+                 <img class="img-circle" src="assets/images/{{meub.path | defaulImage}}">
+             </div>
+             <div class="content">
+                 <div class="main">
+                     <h3 class="name">{{meub.responsable | titlecase}}</h3>
+                     <p class="profession">{{meub.fabriquant | titlecase}}</p>
+                     <p class="text-center">"{{meub.description}}"</p>
+                     <p class="profession" style="font-size: 20px; color: red;" >Prix: {{meub.prix}}</p>
+                 </div>
+                 <div class="footer">
+                      <i class="fa fa-mail-forward"></i> Auto Rotation
+                 </div>
+             </div>
+         </div> <!-- end front panel -->
+         <div class="back">
+             <div class="header">
+                 <h5 class="motto">{{meub.fabriquant | titlecase}}</h5>
+             </div>
+             <div class="content">
+                 <div class="main">
+                     <h4 class="text-center">{{meub.responsable | titlecase}}</h4>
+                     <p class="text-center">{{meub.description}}</p>
+                     <h4 class="text-center">{{meub.telephone}}</h4>
+
+                     <div class="stats-container">
+                         <div class="stats">
+                             <h4>{{meub.disponible}}</h4>
+                             <p>
+                              Nombre disponible
+                             </p>
+                         </div>
+                         <div class="stats">
+                             <h4>{{meub.lieu}}</h4>
+                             <p>
+                                 Societé situé
+                             </p>
+                         </div>
+                         <div class="stats">
+                             <h4>{{meub.prix}}</h4>
+                             <p>
+                                 Prix du Meuble
+                             </p>
+                         </div>
+                     </div>
+
+                 </div>
+             </div>
+             <div class="footer">
+                 <div class="social-links text-center">
+                     <button class="btn btn-success" (click)="acheter()">Acheter</button>
+                     <button class="btn btn-primary" (click)="plusInfo()">Plus de détails</button>
+                 </div>
+             </div>
+         </div> <!-- end back panel -->
+     </div> <!-- end card -->
+ </div> <!-- end card-container -->
+</div>

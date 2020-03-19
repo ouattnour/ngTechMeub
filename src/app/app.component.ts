@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'formaAngular';
+
+ bgColor = 'red';
+ show = false;
+  private readonly newProperty = this;
+
+ changeStatus() {
+   this.show = !this.show;
+
+
+ }
+
 }

@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-6 col-sm-3">
+    <app-liste-meuble (selectMeuble)="selectMeubl($event)" [meubs]="meubs"></app-liste-meuble>
+  </div>
+  <div class="col-md-6 col-sm-9">
+    <app-detail-meuble
+    *ngIf="selectMeuble"
+    [meub]="selectMeuble"></app-detail-meuble>
+  </div>
+</div>
+<div class="row">
+  <app-acheter></app-acheter>
+</div>

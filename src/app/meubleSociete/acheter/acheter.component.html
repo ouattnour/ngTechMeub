@@ -1,0 +1,9 @@
+<div *ngIf="meubs">
+  <span *ngFor="let meub of meubs">
+      <a href="assets/images/{{meub.path}}"> <img src="assets/images/{{meub.path | defaulImage}}"
+        width="150px"
+        height="150px"
+        class="rounded-circle"
+        alt="{{meub.responsable }}"></a>
+  </span>
+</div>
